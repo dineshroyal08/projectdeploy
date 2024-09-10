@@ -1,0 +1,10 @@
+@model AccountDetails.Models.AccountData
+@using (Html.BeginForm("ValidateDelete", "Account")){
+ <center>  
+ <p>
+ Account Number: @Html.TextBoxFor(a => a.AccountNumber)
+ </p>
+  <input type="submit" value="Delete"/>
+  @Html.ActionLink("Create Account", "Create")
+ </center> 
+}

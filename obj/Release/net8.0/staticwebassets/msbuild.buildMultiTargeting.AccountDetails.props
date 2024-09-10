@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AccountDetails.props" />
+</Project>

@@ -1,0 +1,13 @@
+@model AccountDetails.Models.AccountData
+@using (Html.BeginForm("ValidateEdit", "Account")){
+ <center>  
+ <p>
+ Account Number: @Html.TextBoxFor(a => a.AccountNumber)
+ </p>
+ <p>
+ Change Current Balance: @Html.TextBoxFor(a => a.CurrentBalance)
+ </p>
+  <input type="submit" value="Edit"/>
+  @Html.ActionLink("Create Account", "Create")
+ </center> 
+}

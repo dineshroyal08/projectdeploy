@@ -1,0 +1,51 @@
+@model IEnumerable<AccountDetails.Models.AccountData>
+
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        border: 1px solid #ddd;
+    }
+
+    .left-align {
+        text-align: left;
+    }
+
+    .middle-align {
+        text-align: center;
+    }
+
+    .right-align {
+        text-align: right;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th class="left-align">Account Number</th>
+            <th class="middle-align">Account Name</th>
+            <th class="right-align">Current Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var account in Model)
+        {
+            <tr>
+                <td class="left-align">@account.AccountNumber</td>
+                <td class="middle-align">@account.Name</td>
+                <td class="right-align">@account.CurrentBalance.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("Create Account", "Create")
+<br>
+@Html.ActionLink("Edit Account", "Edit")
+<br>
+@Html.ActionLink("Delete Account", "Delete")
